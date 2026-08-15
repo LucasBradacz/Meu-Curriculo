@@ -1,6 +1,4 @@
-/* =========================================================
-   VARIÁVEIS E RESET
-   ========================================================= */
+/* Variáveis de cor e fonte, reutilizadas em todo o arquivo */
 :root {
   --cor-primaria: #2b2d6b;
   --cor-secundaria: #ff6b6b;
@@ -11,6 +9,7 @@
   --fonte-texto: 'Segoe UI', Arial, sans-serif;
 }
 
+/* Reset básico */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -29,6 +28,7 @@ h1, h2, h3 {
   color: var(--cor-primaria);
 }
 
+/* Cabeçalho e menu */
 .header {
   background: linear-gradient(135deg, var(--cor-primaria), #4a4d9e);
   color: #fff;
@@ -62,11 +62,19 @@ h1, h2, h3 {
   transition: background-color 0.25s ease, color 0.25s ease;
 }
 
+/* Efeito hover nos links do menu */
 .nav-links a:hover {
   background-color: var(--cor-secundaria);
   color: #fff;
 }
 
+/* Marca o link da seção visível no momento (JS adiciona/remove esta classe) */
+.nav-links a.ativo {
+  background-color: rgba(255, 255, 255, 0.2);
+  font-weight: bold;
+}
+
+/* Bloco de apresentação (foto, nome, botão) */
 .hero {
   display: flex;
   flex-direction: column;
@@ -94,6 +102,7 @@ h1, h2, h3 {
   max-width: 500px;
 }
 
+/* Estilo padrão de todos os botões da página */
 button {
   cursor: pointer;
   border: none;
@@ -105,17 +114,21 @@ button {
   transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
+/* Efeito hover nos botões */
 button:hover {
   background-color: #e14d4d;
   transform: translateY(-2px);
 }
 
+/* Seções da página */
 .secao {
   padding: 2.5rem 1.5rem;
   max-width: 900px;
   margin: 0 auto;
 }
 
+/* Seção com fundo alternativo (fica 100% da largura, com o conteúdo
+   centralizado por dentro do .secao-inner abaixo) */
 .secao-alt {
   background-color: var(--cor-fundo-alt);
   max-width: 100%;
@@ -123,15 +136,12 @@ button:hover {
   padding-right: 0;
 }
 
+/* Único elemento que se centraliza dentro de uma .secao-alt — título e
+   conteúdo ficam juntos aqui, então tudo se alinha entre si */
 .secao-inner {
   max-width: 900px;
   margin: 0 auto;
   padding: 0 1.5rem;
-}
-
-.secao-inner {
-  max-width: 900px;
-  margin: 0 auto;
 }
 
 .secao h2 {
@@ -141,6 +151,7 @@ button:hover {
   padding-bottom: 0.3rem;
 }
 
+/* Habilidades: chips em Flexbox, largura acompanha o texto de cada um */
 .skills-flex {
   display: flex;
   flex-wrap: wrap;
@@ -148,27 +159,27 @@ button:hover {
 }
 
 .skills-lista {
-  display: contents;
+  display: contents; /* achata a <ul>, deixando os <li> fluírem juntos no flex */
   list-style: none;
 }
 
 .skills-lista li {
   background-color: #fff;
-  margin-bottom: 0.5rem;
   padding: 0.6rem 1.2rem;
   flex: 0 1 auto;
-  max-width: 220px;
   text-align: center;
   border-radius: 6px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
 .skills-lista li:hover {
   background-color: var(--cor-secundaria);
   color: #fff;
+  transform: translateY(-2px);
 }
 
+/* Cards de projeto */
 .card-projeto {
   background-color: #fff;
   padding: 1rem 1.5rem;
@@ -177,32 +188,36 @@ button:hover {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-#btn-toggle-detalhes {
+.btn-ver-projeto {
+  margin-top: 0.75rem;
+  background-color: var(--cor-primaria);
+  font-size: 0.9rem;
+  padding: 0.4rem 0.9rem;
+}
+
+.btn-ver-projeto:hover {
+  background-color: #4a4d9e;
+}
+
+.projeto-imagem {
   margin-top: 1rem;
 }
 
+.projeto-imagem img {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  border-radius: 6px;
+  border: 1px solid #eee;
+  display: block;
+}
+
+/* Classe usada pelo JS para mostrar/esconder elementos */
 .escondido {
   display: none;
 }
 
-#detalhes-extra {
-  margin-top: 1rem;
-  background-color: #fff;
-  padding: 1rem 1.5rem;
-  border-radius: 8px;
-}
-
-.descricao-midia {
-  margin-top: 0.5rem;
-  font-size: 0.9rem;
-  color: #555;
-}
-
-video {
-  max-width: 100%;
-  border-radius: 8px;
-}
-
+/* Formulário de contato */
 form {
   display: flex;
   flex-direction: column;
@@ -253,7 +268,7 @@ input:focus {
   color: #fff;
 }
 
-/* devemos usar isso depois, ent ja fica ai responsabilidade */
+/* Responsividade básica para telas pequenas */
 @media (max-width: 600px) {
   .navbar {
     flex-direction: column;

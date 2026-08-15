@@ -3,114 +3,125 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Currículo interativo de Lucas Miron Bradacz — desenvolvedor Full-Stack e escritor." />
+  <link rel="icon" href="media/Surpreso.png" />
   <title>Lucas Miron :P</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <header class="header">
-    <nav class="navbar">
-      <span class="logo">Lucas.dev</span>
-      <ul class="nav-links">
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#skills">Habilidades</a></li>
-        <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
+<header class="header">
+  <nav class="navbar">
+    <span class="logo">Lucas.dev</span>
+    <ul class="nav-links">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#skills">Habilidades</a></li>
+      <li><a href="#projetos">Projetos</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
 
-    <div class="hero">
-      <img src="media/lucas.jpeg" alt="Foto de perfil" class="foto-perfil" />
-      <h1 id="saudacao-topo">Olá, eu sou o Lucas!</h1>
-      <p>Desenvolvedor Full-Stack e escritor nas horas vagas.</p>
-      <button id="btn-boas-vindas">Clique para um oi</button>
-    </div>
-  </header>
+  <div class="hero">
+    <img src="media/lucas.jpeg" alt="Foto de perfil" class="foto-perfil" />
+    <h1 id="saudacao-topo">Olá, eu sou o Lucas!</h1>
+    <p>Desenvolvedor Full-Stack e escritor nas horas vagas.</p>
+    <button id="btn-boas-vindas">Clique para um oi</button>
+  </div>
+</header>
 
-  <main>
-    <section id="sobre" class="secao">
-      <h2>Sobre mim</h2>
-      <article>
-        <p>
-          Sou desenvolvedor Full-Stack, com experiência principal em
-          <strong>Ruby on Rails</strong>, <strong>.Net</strong> e <strong>PostgreSQL</strong>. Também escrevo
-          poemas, contos, crônicas e fragmentos em português.
-        </p>
-      </article>
-    </section>
+<main>
+  <section id="sobre" class="secao">
+    <h2>Sobre mim</h2>
+    <article>
+      <p>
+        Sou desenvolvedor Full-Stack, com experiência principal em
+        <strong>Ruby on Rails</strong>, <strong>.Net</strong> e <strong>PostgreSQL</strong>. Também escrevo
+        poemas, contos, crônicas e fragmentos em português.
+      </p>
+    </article>
+  </section>
 
-    <section id="skills" class="secao secao-alt">
-      <div class="secao-inner">
-        <h2>Habilidades</h2>
-        <div class="skills-flex">
-          <ul class="skills-lista">
-            <li>.Net</li>
-            <li>Ruby on Rails</li>
-            <li>PostgreSQL</li>
-            <li>HTML5 & CSS3</li>
-            <li>JavaScript</li>
-            </ul>
-          <ul class="skills-lista">
-            <li>Git & GitHub</li>
-            <li>Design responsivo</li>
-            <li>Escrita criativa</li>
-            <li>Resolução de problemas</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="projetos" class="secao">
-      <h2>Projetos</h2>
-      <article class="card-projeto">
-        <h3>Magnus Codex</h3>
-        <p>Gerenciador web de fichas e cartas de RPG, construído em Rails.</p>
-      </article>
-      <article class="card-projeto">
-        <h3>Coletânea Literária</h3>
-        <p>Arquivo pessoal de poemas, contos e crônicas escritos em português.</p>
-      </article>
-
-      <button id="btn-toggle-detalhes" type="button">Mostrar mais detalhes</button>
-      <div id="detalhes-extra" class="escondido">
-        <p>
-          Estes projetos foram desenvolvidos combinando back-end robusto com
-          atenção à experiência do usuário e ao cuidado estético — o mesmo
-          cuidado que aplico à escrita.
-        </p>
-      </div>
-    </section>
-
-    <section id="contato" class="secao secao-alt">
-      <div class="secao-inner">
-        <h2>Contato</h2>
-        <form id="form-contato">
-          <label for="nome">Seu nome:</label>
-          <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required />
-
-          <label for="email">Seu e-mail:</label>
-          <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required />
-
-          <button type="submit">Enviar saudação</button>
-        </form>
-        <p id="saudacao-personalizada"></p>
-
-        <ul class="lista-contato">
-          <li><a href="mailto:lucas1bradacz@gmail.com">✉️ lucas1bradacz@gmail.com</a></li>
-          <li><a href="https://github.com/LucasBradacz" target="_blank" rel="noopener noreferrer">💻 GitHub</a></li>
+  <!-- secao-alt: todo o conteúdo fica dentro de .secao-inner, que é o único
+       elemento centralizado. O título vive DENTRO desse wrapper, então
+       ele se alinha com o resto do conteúdo — igual já acontecia
+       naturalmente nas seções .secao normais. -->
+  <section id="skills" class="secao secao-alt">
+    <div class="secao-inner">
+      <h2>Habilidades</h2>
+      <div class="skills-flex">
+        <ul class="skills-lista">
+          <li>.Net</li>
+          <li>Ruby on Rails</li>
+          <li>PostgreSQL</li>
+          <li>HTML5 & CSS3</li>
+          <li>JavaScript</li>
         </ul>
-
-        <button id="btn-tema" type="button">Alternar cor de fundo</button>
+        <ul class="skills-lista">
+          <li>Git & GitHub</li>
+          <li>Design responsivo</li>
+          <li>Escrita criativa</li>
+          <li>Resolução de problemas</li>
+        </ul>
       </div>
-    </section>
+    </div>
+  </section>
 
-  </main>
+  <section id="projetos" class="secao">
+    <h2>Projetos</h2>
 
-  <footer class="footer">
-    <p>&copy; <span id="ano"></span> Lucas Miron Bradacz — Todos os direitos reservados.</p>
-    <p>Visitas nesta página: <span id="contador-visitas">0</span></p>
-  </footer>
+    <article class="card-projeto">
+      <h3>Magnus Codex</h3>
+      <p>Gerenciador web de fichas e cartas de RPG, construído em Rails.</p>
+      <button class="btn-ver-projeto" type="button" aria-expanded="false">
+        Ver capturas de tela
+      </button>
+      <div class="projeto-imagem escondido">
+        <img src="media/Magnus.jpg" alt="Captura de tela do Magnus Codex, mostrando a lista de fichas de personagem de RPG" />
+      </div>
+    </article>
 
-  <script src="script.js"></script>
+    <article class="card-projeto">
+      <h3>Coletânea Literária</h3>
+      <p>Arquivo pessoal de poemas, contos e crônicas escritos em português.</p>
+      <button class="btn-ver-projeto" type="button" aria-expanded="false">
+        Ver capturas de tela
+      </button>
+      <div class="projeto-imagem escondido">
+        <img src="media/CapaLivro.png" alt="Captura de tela do documento da Coletânea Literária, com os poemas e contos organizados" />
+      </div>
+    </article>
+  </section>
+
+  <section id="contato" class="secao secao-alt">
+    <div class="secao-inner">
+      <h2>Contato</h2>
+      <form id="form-contato">
+        <label for="nome">Seu nome:</label>
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required />
+
+        <label for="email">Seu e-mail:</label>
+        <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required />
+
+        <button type="submit">Enviar saudação</button>
+      </form>
+      <p id="saudacao-personalizada"></p>
+
+      <ul class="lista-contato">
+        <li><a href="mailto:lucas1bradacz@gmail.com">✉️ lucas1bradacz@gmail.com</a></li>
+        <li><a href="https://github.com/LucasBradacz" target="_blank" rel="noopener noreferrer">💻 GitHub</a></li>
+      </ul>
+
+      <button id="btn-tema" type="button">Alternar cor de fundo</button>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>&copy; <span id="ano"></span> Lucas Miron Bradacz — Todos os direitos reservados.</p>
+  <p>Visitas nesta página: <span id="contador-visitas">0</span></p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
