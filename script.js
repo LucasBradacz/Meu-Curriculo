@@ -1,6 +1,6 @@
 const btnBoasVindas = document.getElementById("btn-boas-vindas");
 btnBoasVindas.addEventListener("click", function () {
-  alert("Olá! Obrigado por visitar meu currículo. 👋");
+  alert("Oie! Boa visita. :P");
 });
 
 //Mostrar/esconder capturas de tela de cada projeto + Listeners
