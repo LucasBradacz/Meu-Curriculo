@@ -5,22 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Currículo interativo de Lucas Miron Bradacz — desenvolvedor Full-Stack e escritor." />
   <link rel="icon" href="media/Surpreso.png" />
-  <title>Lucas Miron :P</title>
   <link rel="stylesheet" href="style.css" />
+  <title>Lucas Miron :P</title>
 </head>
 <body>
 
-<header class="header">
-  <nav class="navbar">
-    <span class="logo">Lucas.dev</span>
-    <ul class="nav-links">
-      <li><a href="#sobre">Sobre</a></li>
-      <li><a href="#skills">Habilidades</a></li>
-      <li><a href="#projetos">Projetos</a></li>
-      <li><a href="#contato">Contato</a></li>
-    </ul>
-  </nav>
+<nav class="navbar">
+  <span class="logo">Lucas.dev</span>
+  <ul class="nav-links">
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#skills">Habilidades</a></li>
+    <li><a href="#projetos">Projetos</a></li>
+    <li><a href="#formacao">Formação</a></li>
+    <li><a href="#contato">Contato</a></li>
+  </ul>
+</nav>
 
+<header class="header">
   <div class="hero">
     <img src="media/lucas.jpeg" alt="Foto de perfil" class="foto-perfil" />
     <h1 id="saudacao-topo">Olá, eu sou o Lucas!</h1>
@@ -41,10 +42,6 @@
     </article>
   </section>
 
-  <!-- secao-alt: todo o conteúdo fica dentro de .secao-inner, que é o único
-       elemento centralizado. O título vive DENTRO desse wrapper, então
-       ele se alinha com o resto do conteúdo — igual já acontecia
-       naturalmente nas seções .secao normais. -->
   <section id="skills" class="secao secao-alt">
     <div class="secao-inner">
       <h2>Habilidades</h2>
@@ -92,27 +89,47 @@
     </article>
   </section>
 
-  <section id="contato" class="secao secao-alt">
+  <section id="formacao" class="secao secao-alt">
     <div class="secao-inner">
-      <h2>Contato</h2>
-      <form id="form-contato">
-        <label for="nome">Seu nome:</label>
-        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required />
+      <h2>Formação e Experiência</h2>
 
-        <label for="email">Seu e-mail:</label>
-        <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required />
+      <article class="card-formacao">
+        <h3>Bacharelado em Ciência da Computação</h3>
+        <p class="formacao-instituicao">Universidade do Oeste de Santa Catarina</p>
+        <p class="formacao-periodo">2024 - 2028</p>
+      </article>
 
-        <button type="submit">Enviar saudação</button>
-      </form>
-      <p id="saudacao-personalizada"></p>
-
-      <ul class="lista-contato">
-        <li><a href="mailto:lucas1bradacz@gmail.com">✉️ lucas1bradacz@gmail.com</a></li>
-        <li><a href="https://github.com/LucasBradacz" target="_blank" rel="noopener noreferrer">💻 GitHub</a></li>
-      </ul>
-
-      <button id="btn-tema" type="button">Alternar cor de fundo</button>
+      <article class="card-formacao">
+        <h3>Engenheiro de Software — 7AZ Bemobi</h3>
+        <p class="formacao-periodo">Outubro 2025 — Presente</p>
+        <ul class="formacao-lista">
+          <li>Desenvolvimento e manutenção de aplicações em .NET.</li>
+          <li>Integração com banco de dados PostgreSQL.</li>
+          <li>Trabalho em equipe e resolução de problemas do dia a dia.</li>
+        </ul>
+      </article>
     </div>
+  </section>
+
+  <section id="contato" class="secao">
+    <h2>Contato</h2>
+    <form id="form-contato">
+      <label for="nome">Seu nome:</label>
+      <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required />
+
+      <label for="email">Seu e-mail:</label>
+      <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required />
+
+      <button type="submit">Enviar saudação</button>
+    </form>
+    <p id="saudacao-personalizada"></p>
+
+    <ul class="lista-contato">
+      <li><a href="mailto:lucas1bradacz@gmail.com">✉️ lucas1bradacz@gmail.com</a></li>
+      <li><a href="https://github.com/LucasBradacz" target="_blank" rel="noopener noreferrer">💻 GitHub</a></li>
+    </ul>
+
+    <button id="btn-tema" type="button">Alternar cor de fundo</button>
   </section>
 
 </main>
