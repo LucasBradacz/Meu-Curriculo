@@ -53,6 +53,6 @@ formulário com campos de nome e e-mail.
 - Ano atual exibido automaticamente no rodapé.
 
 ## Publicação
-Página publicada em: **[(https://lucasbradacz.github.io/Meu-Curriculo/)]**
+Página publicada em: **[[CUrrículo | Lucas Miron Bradacz](https://lucasbradacz.github.io/Meu-Curriculo/)]**
 
 Publicado via [GitHub Pages]
